@@ -50,19 +50,16 @@ const planetData = {
   Asteroid: { 
     info: "This is an asteroid"
   },
-  Comet: { 
-    info: "This is a comet"
-  }
 };
 
-document.querySelectorAll('.planet, .asteroid, .comet').forEach(spaceObject => {
+document.querySelectorAll('.planet, .asteroid').forEach(spaceObject => {
   spaceObject.addEventListener('click', (e) => {
     const objectName = e.target.dataset.planet;
     const infoBox = document.querySelector('.info-box');
     
     let objectInfo;
 
-    if (objectName === 'Asteroid' || objectName === 'Comet') {
+    if (objectName === 'Asteroid') {
       objectInfo = planetData[objectName];
     } else {
       objectInfo = planetData[objectName];
@@ -89,7 +86,7 @@ document.querySelectorAll('.planet, .asteroid, .comet').forEach(spaceObject => {
 
 document.getElementById('close-info').addEventListener('click', () => {
   document.querySelector('.info-box').style.display = 'none';
-  document.querySelectorAll('.planet, .asteroid, .comet').forEach(object => {
+  document.querySelectorAll('.planet, .asteroid').forEach(object => {
     object.style.transform = 'scale(1)';
   });
 });
