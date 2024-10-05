@@ -40,7 +40,7 @@ body {
 .saturn-orbit { width: 480px; height: 480px; }
 .uranus-orbit { width: 560px; height: 560px; }
 .neptune-orbit { width: 640px; height: 640px; }
-.asteroid-orbit, .comet-orbit { width: 700px; height: 700px; }
+.asteroid-orbit { width: 700px; height: 700px; }
 
 .sun {
   position: absolute;
@@ -134,17 +134,11 @@ body {
 .asteroid {
   width: 10px;
   height: 10px;
-  background-image: url('path_to_realistic_asteroid_image.jpg');
-  transform: translate(-350px, -350px);
+  background-image: url('asteroid.png');
+  background-size: cover;
+  transform: translate(-150px, -150px);
   animation: rotate-asteroid 100s infinite;
-}
-
-.comet {
-  width: 12px;
-  height: 12px;
-  background-image: url('path_to_realistic_comet_image.jpg');
-  transform: translate(-380px, -380px);
-  animation: rotate-comet 120s infinite;
+  z-index: 10;
 }
 
 /* Animation for planet orbits remains unchanged */
@@ -208,13 +202,6 @@ body {
   from { transform: rotate(0deg) translateX(350px) rotate(0deg); 
   } 
   to { transform: rotate(360deg) translateX(350px) rotate(-360deg); 
-  } 
-}
-
-@keyframes rotate-comet { 
-  from { transform: rotate(0deg) translateX(380px) rotate(0deg);
-  } 
-  to { transform: rotate(360deg) translateX(380px) rotate(-360deg); 
   } 
 }
 
