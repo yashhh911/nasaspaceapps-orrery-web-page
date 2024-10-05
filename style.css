@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.solar-system-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mercury-orbit { width: 120px; height: 120px; }
+.venus-orbit { width: 180px; height: 180px; }
+.earth-orbit { width: 250px; height: 250px; }
+.mars-orbit { width: 320px; height: 320px; }
+.jupiter-orbit { width: 400px; height: 400px; }
+.saturn-orbit { width: 480px; height: 480px; }
+.uranus-orbit { width: 560px; height: 560px; }
+.neptune-orbit { width: 640px; height: 640px; }
+.asteroid-orbit, .comet-orbit { width: 700px; height: 700px; }
+
+.sun {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('sun.png'); /* Replace with the actual path to your sun image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.7); /* Soft yellow glow effect */
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: -50%;
+  background-size: cover;
+  background-position: center;
+  animation-timing-function: linear;
+}
+
+.mercury {
+  width: 8px;
+  height: 8px;
+  background-image: url('mercury.png'); /* Update with the correct image URL */
+  transform: translate(-60px, -60px);
+  animation: rotate-mercury 20s infinite;
+}
+
+.venus {
+  width: 12px;
+  height: 12px;
+  background-image: url('venus.png');
+  transform: translate(-90px, -90px);
+  animation: rotate-venus 50s infinite;
+}
+
+.earth {
+  width: 15px;
+  height: 15px;
+  background-image: url('earth.png');
+  transform: translate(-120px, -120px);
+  animation: rotate-earth 80s infinite;
+}
+
+.mars {
+  width: 10px;
+  height: 10px;
+  background-image: url('mars.png');
+  transform: translate(-150px, -150px);
+  animation: rotate-mars 120s infinite;
+}
+
+.jupiter {
+  width: 25px;
+  height: 25px;
+  background-image: url('jupiter.png');
+  transform: translate(-180px, -180px);
+  animation: rotate-jupiter 200s infinite;
+}
+
+.saturn {
+  width: 22px;
+  height: 22px;
+  background-image: url('saturn.png');
+  transform: translate(-240px, -240px);
+  animation: rotate-saturn 240s infinite;
+}
+
+.uranus {
+  width: 18px;
+  height: 18px;
+  background-image: url('uranus.png');
+  transform: translate(-280px, -280px);
+  animation: rotate-uranus 320s infinite;
+}
+
+.neptune {
+  width: 16px;
+  height: 16px;
+  background-image: url('neptune.png');
+  transform: translate(-320px, -320px);
+  animation: rotate-neptune 400s infinite;
+}
+
+.asteroid {
+  width: 10px;
+  height: 10px;
+  background-image: url('path_to_realistic_asteroid_image.jpg');
+  transform: translate(-350px, -350px);
+  animation: rotate-asteroid 100s infinite;
+}
+
+.comet {
+  width: 12px;
+  height: 12px;
+  background-image: url('path_to_realistic_comet_image.jpg');
+  transform: translate(-380px, -380px);
+  animation: rotate-comet 120s infinite;
+}
+
+/* Animation for planet orbits remains unchanged */
+@keyframes rotate-mercury { 
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(60px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-venus { 
+  from { transform: rotate(0deg) translateX(90px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(90px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-earth { 
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(120px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-mars { 
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-jupiter { 
+  from { transform: rotate(0deg) translateX(180px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(180px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-saturn { 
+  from { transform: rotate(0deg) translateX(240px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(240px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-uranus { 
+  from { transform: rotate(0deg) translateX(280px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(280px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-neptune { 
+  from { transform: rotate(0deg) translateX(320px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(320px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-asteroid { 
+  from { transform: rotate(0deg) translateX(350px) rotate(0deg); 
+  } 
+  to { transform: rotate(360deg) translateX(350px) rotate(-360deg); 
+  } 
+}
+
+@keyframes rotate-comet { 
+  from { transform: rotate(0deg) translateX(380px) rotate(0deg);
+  } 
+  to { transform: rotate(360deg) translateX(380px) rotate(-360deg); 
+  } 
+}
+
+.info-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  width: 200px;
+}
+
+.info-box h2 {
+  margin: 0;
+}
+
+.info-box button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

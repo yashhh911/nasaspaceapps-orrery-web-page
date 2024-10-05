@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elliptical Orbit Solar System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="solar-system-container">
+    <div class="solar-system">
+      <div class="orbit mercury-orbit"></div>
+      <div class="orbit venus-orbit"></div>
+      <div class="orbit earth-orbit"></div>
+      <div class="orbit mars-orbit"></div>
+      <div class="orbit jupiter-orbit"></div>
+      <div class="orbit saturn-orbit"></div>
+      <div class="orbit uranus-orbit"></div>
+      <div class="orbit neptune-orbit"></div>
+
+      <div class="asteroid-belt"></div>
+
+      <div class="sun"></div>
+      <div class="planet mercury" data-planet="Mercury"></div>
+      <div class="planet venus" data-planet="Venus"></div>
+      <div class="planet earth" data-planet="Earth"></div>
+      <div class="planet mars" data-planet="Mars"></div>
+      <div class="planet jupiter" data-planet="Jupiter"></div>
+      <div class="planet saturn" data-planet="Saturn"></div>
+      <div class="planet uranus" data-planet="Uranus"></div>
+      <div class="planet neptune" data-planet="Neptune"></div>
+
+      <div class="asteroid" data-planet="Asteroid"></div>
+
+      <div class="comet" data-planet="Comet"></div>
+    </div>
+    <div class="info-box">
+      <h2 id="planet-name"></h2>
+      <p id="planet-info"></p>
+      <button id="close-info">Close</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
