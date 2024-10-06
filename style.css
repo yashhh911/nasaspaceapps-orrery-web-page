@@ -137,7 +137,7 @@ body {
   background-image: url('asteroid.png');
   background-size: cover;
   transform: translate(-150px, -150px);
-  animation: rotate-asteroid 100s infinite;
+  animation: rotate-asteroid 200s infinite;
   z-index: 10;
 }
 
